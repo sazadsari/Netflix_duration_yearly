@@ -1,7 +1,6 @@
 # Netflix movie duration over the years follow along
 # Import pandas under its usual alias
 import pandas as pd
-# Import matplotlib.pyplot under its usual alias and create a figure
 import matplotlib.pyplot as plt
 
 # Create the years and durations lists
@@ -20,6 +19,8 @@ durations_df = pd.DataFrame(movie_dict)
 # Print the DataFrame
 print(durations_df)
 
+# Import matplotlib.pyplot under its usual alias and create a figure
+
 fig = plt.figure()
 
 # Draw a line plot of release_years and durations
@@ -32,7 +33,7 @@ release_years = plt.title("Netflix Movie Durations 2011-2020")
 plt.show()
 
 # Read in the CSV as a DataFrame
-netflix_df = pd.read_csv("C:/Users/sol/PycharmProjects/Netflix_duration_yearly/netflix_data.csv")
+netflix_df = pd.read_csv("C:/Users/sol/Downloads/netflix_titles.csv")
 
 # Print the first five rows of the DataFrame
 print(netflix_df.head())
@@ -82,6 +83,7 @@ for lab, row in netflix_movies_col_subset.iterrows():
 print(colors[0:10])
 # Set the figure style and initalize a new figure
 plt.style.use('fivethirtyeight')
+
 fig = plt.figure(figsize=(12, 8))
 
 # Create a scatter plot of duration versus release_year
